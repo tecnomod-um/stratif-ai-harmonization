@@ -1,0 +1,24 @@
+{
+  "resourceType": "Observation",
+  "id": "realsleep-001",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "3151-8",
+        "display": "Real sleep time"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/12345",
+    "display": "John Doe"
+  },
+  "valueQuantity": {
+    "value": "6h 50min",
+    "unit": "hours, minutes",
+    "system": "http://unitsofmeasure.org",
+    "code": "h,min"
+  }
+}

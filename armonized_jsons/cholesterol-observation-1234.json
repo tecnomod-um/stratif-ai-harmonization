@@ -1,0 +1,24 @@
+{
+  "resourceType": "Observation",
+  "id": "cholesterol-4321",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "2093-3",
+        "display": "Cholesterol [Moles/volume] in Serum or Plasma"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/1234",
+    "display": "John Doe"
+  },
+  "valueQuantity": {
+    "value": 4.5,
+    "unit": "mmol/L",
+    "system": "http://unitsofmeasure.org",
+    "code": "mmol/L"
+  }
+}

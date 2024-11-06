@@ -1,0 +1,24 @@
+{
+  "resourceType": "Observation",
+  "id": "steps-001",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "55423-8",
+        "display": "Number of steps in a day"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/12345",
+    "display": "John Doe"
+  },
+  "valueQuantity": {
+    "value": 10000,
+    "unit": "Number/day",
+    "system": "http://unitsofmeasure.org",
+    "code": "number/day"
+  }
+}

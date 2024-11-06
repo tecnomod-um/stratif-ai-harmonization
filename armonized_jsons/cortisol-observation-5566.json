@@ -1,0 +1,24 @@
+{
+  "resourceType": "Observation",
+  "id": "cortisol-5566",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "2143-6",
+        "display": "Cortisol [Moles/volume] in Serum or Plasma"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/1234",
+    "display": "John Doe"
+  },
+  "valueQuantity": {
+    "value": 0.4,
+    "unit": "mmol/L",
+    "system": "http://unitsofmeasure.org",
+    "code": "mmol/L"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "resourceType": "Observation",
+  "id": "leukocytes-5678",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "6690-2",
+        "display": "Leukocytes [#/volume] in Blood"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/1234",
+    "display": "John Doe"
+  },
+  "valueQuantity": {
+    "value": 6.5,
+    "unit": "10^9/L",
+    "system": "http://unitsofmeasure.org",
+    "code": "10*9/L"
+  }
+}

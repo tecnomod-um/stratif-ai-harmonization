@@ -1,0 +1,24 @@
+{
+  "resourceType": "Observation",
+  "id": "body-temp-6789",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "8310-5",
+        "display": "Body temperature"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/1234",
+    "display": "John Doe"
+  },
+  "valueQuantity": {
+    "value": 37.5,
+    "unit": "\u00b0C",
+    "system": "http://unitsofmeasure.org",
+    "code": "Cel"
+  }
+}

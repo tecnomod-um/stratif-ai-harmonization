@@ -1,0 +1,24 @@
+{
+  "resourceType": "Observation",
+  "id": "sleep-001",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "3150-0",
+        "display": "Total sleep time"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/12345",
+    "display": "John Doe"
+  },
+  "valueQuantity": {
+    "value": "7h 30min",
+    "unit": "hours, minutes",
+    "system": "http://unitsofmeasure.org",
+    "code": "h,min"
+  }
+}

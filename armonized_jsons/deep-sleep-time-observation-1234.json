@@ -1,0 +1,24 @@
+{
+  "resourceType": "Observation",
+  "id": "deep-001",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "93831-6",
+        "display": "Deep sleep duration"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/12345",
+    "display": "John Doe"
+  },
+  "valueQuantity": {
+    "value": "1h 00min",
+    "unit": "hours, minutes",
+    "system": "http://unitsofmeasure.org",
+    "code": "h,min"
+  }
+}

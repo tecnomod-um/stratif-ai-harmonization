@@ -1,0 +1,24 @@
+{
+  "resourceType": "Observation",
+  "id": "glucagon-7788",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1659-1",
+        "display": "Glucagon [Moles/volume] in Serum or Plasma"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/1234",
+    "display": "John Doe"
+  },
+  "valueQuantity": {
+    "value": 0.015,
+    "unit": "mmol/L",
+    "system": "http://unitsofmeasure.org",
+    "code": "mmol/L"
+  }
+}

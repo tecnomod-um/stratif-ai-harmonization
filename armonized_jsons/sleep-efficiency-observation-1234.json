@@ -1,0 +1,24 @@
+{
+  "resourceType": "Observation",
+  "id": "efficiency-001",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "248272009",
+        "display": "Sleep efficiency"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/12345",
+    "display": "John Doe"
+  },
+  "valueQuantity": {
+    "value": 85,
+    "unit": "%",
+    "system": "http://unitsofmeasure.org",
+    "code": "%"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "resourceType": "Observation",
+  "id": "calories-001",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "41981-2",
+        "display": "Calories burned"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/12345",
+    "display": "John Doe"
+  },
+  "valueQuantity": {
+    "value": 500,
+    "unit": "kcal",
+    "system": "http://unitsofmeasure.org",
+    "code": "kcal"
+  }
+}

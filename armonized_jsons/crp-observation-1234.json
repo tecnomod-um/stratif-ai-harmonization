@@ -1,0 +1,24 @@
+{
+  "resourceType": "Observation",
+  "id": "crp-1212",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1988-5",
+        "display": "C-Reactive Protein [Mass/volume] in Serum or Plasma"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/1234",
+    "display": "John Doe"
+  },
+  "valueQuantity": {
+    "value": 3.0,
+    "unit": "mg/L",
+    "system": "http://unitsofmeasure.org",
+    "code": "mg/L"
+  }
+}

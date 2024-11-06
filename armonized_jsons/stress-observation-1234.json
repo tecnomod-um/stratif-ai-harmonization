@@ -1,0 +1,24 @@
+{
+  "resourceType": "Observation",
+  "id": "stress-001",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "93085-8",
+        "display": "Stress level"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/12345",
+    "display": "John Doe"
+  },
+  "valueQuantity": {
+    "value": "Moderate",
+    "unit": "Low to high",
+    "system": "http://unitsofmeasure.org",
+    "code": "low-high"
+  }
+}

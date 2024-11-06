@@ -2,10 +2,9 @@ from observation import Observation
 import json
 
 
-# Function to harmonize Blood Pressure Observation
 def harmonize_blood_pressure(resource_id, patient_reference, patient_display, value, unit="mmHg",
                              system="http://unitsofmeasure.org", code="mm[Hg]"):
-    # Create an Observation object for Blood Pressure
+
     blood_pressure_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
@@ -19,11 +18,9 @@ def harmonize_blood_pressure(resource_id, patient_reference, patient_display, va
         value_code=code
     )
 
-    # Return the JSON representation of the observation
     return blood_pressure_observation.to_json()
 
 
-# Function to harmonize Length (Height) Observation
 def harmonize_length(resource_id, patient_reference, patient_display, value, unit="cm", system="http://unitsofmeasure.org", code="cm"):
     length_observation = Observation(
         id=resource_id,
@@ -40,7 +37,6 @@ def harmonize_length(resource_id, patient_reference, patient_display, value, uni
     return length_observation.to_json()
 
 
-# Function to harmonize Weight Observation
 def harmonize_weight(resource_id, patient_reference, patient_display, value, unit="kg", system="http://unitsofmeasure.org", code="kg"):
     weight_observation = Observation(
         id=resource_id,
@@ -57,12 +53,11 @@ def harmonize_weight(resource_id, patient_reference, patient_display, value, uni
     return weight_observation.to_json()
 
 
-# Function to harmonize Belly Circumference Observation
 def harmonize_belly_circumference(resource_id, patient_reference, patient_display, value, unit="cm", system="http://unitsofmeasure.org", code="cm"):
     belly_circumference_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="276361009",  # LOINC code for Belly circumference
+        coding_code="276361009",
         coding_display="Waist circumference",
         subject_reference=patient_reference,
         subject_display=patient_display,
@@ -74,12 +69,11 @@ def harmonize_belly_circumference(resource_id, patient_reference, patient_displa
     return belly_circumference_observation.to_json()
 
 
-# Function to harmonize Heart Rate Observation
 def harmonize_heart_rate(resource_id, patient_reference, patient_display, value, unit="beats/minute", system="http://unitsofmeasure.org", code="/min"):
     heart_rate_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="364075005",  # LOINC code for Heart rate
+        coding_code="364075005",
         coding_display="Heart rate",
         subject_reference=patient_reference,
         subject_display=patient_display,
@@ -91,11 +85,11 @@ def harmonize_heart_rate(resource_id, patient_reference, patient_display, value,
     return heart_rate_observation.to_json()
 
 
-def harmonize_body_temperature(resource_id, patient_reference, patient_display, value, unit="°C", system="http://unitsofmeasure.org", code="Cel"):
+def harmonize_body_temperature(resource_id, patient_reference, patient_display, value, unit="C", system="http://unitsofmeasure.org", code="Cel"):
     body_temperature_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="8310-5",  # LOINC code for Body temperature
+        coding_code="386725007",
         coding_display="Body temperature",
         subject_reference=patient_reference,
         subject_display=patient_display,
@@ -107,32 +101,14 @@ def harmonize_body_temperature(resource_id, patient_reference, patient_display, 
     return body_temperature_observation.to_json()
 
 
-# Function to harmonize Subcutaneous Glucose Observation
-def harmonize_subcutaneous_glucose(resource_id, patient_reference, patient_display, value, unit="mmol/L",
-                                   system="http://unitsofmeasure.org", code="mmol/L"):
-    subcutaneous_glucose_observation = Observation(
-        id=resource_id,
-        coding_system="http://snomed.info/sct",
-        coding_code="14743-9",  # LOINC code for Subcutaneous glucose
-        coding_display="Glucose [Moles/volume] in Subcutaneous tissue",
-        subject_reference=patient_reference,
-        subject_display=patient_display,
-        value=value,
-        value_unit=unit,
-        value_system=system,
-        value_code=code
-    )
-    return subcutaneous_glucose_observation.to_json()
-
-
-# Function to harmonize Arterial Ketones Observation
-def harmonize_arterial_ketones(resource_id, patient_reference, patient_display, value, unit="mmol/L",
+# TODO Not enough context
+def harmonize_ketones(resource_id, patient_reference, patient_display, value, unit="mmol/L",
                                system="http://unitsofmeasure.org", code="mmol/L"):
     arterial_ketones_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="2500-7",  # LOINC code for Arterial ketones
-        coding_display="Ketones [Moles/volume] in Arterial blood",
+        coding_code="NONE",
+        coding_display="NONE",
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -143,14 +119,13 @@ def harmonize_arterial_ketones(resource_id, patient_reference, patient_display, 
     return arterial_ketones_observation.to_json()
 
 
-# Function to harmonize Salivary Cortisol Observation
-def harmonize_salivary_cortisol(resource_id, patient_reference, patient_display, value, unit="nmol/L",
-                                system="http://unitsofmeasure.org", code="nmol/L"):
+def harmonize_cortisol(resource_id, patient_reference, patient_display, value, unit="mmol/L",
+                                system="http://unitsofmeasure.org", code="mmol/L"):
     salivary_cortisol_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="2142-8",  # LOINC code for Salivary cortisol
-        coding_display="Cortisol [Moles/volume] in Saliva",
+        coding_code="62037009",
+        coding_display="Cortisol measurement",
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -161,13 +136,12 @@ def harmonize_salivary_cortisol(resource_id, patient_reference, patient_display,
     return salivary_cortisol_observation.to_json()
 
 
-# Function to harmonize Hemoglobin Observation
 def harmonize_hemoglobin(resource_id, patient_reference, patient_display, value, unit="g/L", system="http://unitsofmeasure.org", code="g/L"):
     hemoglobin_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="718-7",  # LOINC code for Hemoglobin
-        coding_display="Hemoglobin [Mass/volume] in Blood",
+        coding_code="271026005",
+        coding_display="Hemoglobin level estimation",
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -178,13 +152,12 @@ def harmonize_hemoglobin(resource_id, patient_reference, patient_display, value,
     return hemoglobin_observation.to_json()
 
 
-# Function to harmonize Leukocytes Observation
 def harmonize_leukocytes(resource_id, patient_reference, patient_display, value, unit="10^9/L", system="http://unitsofmeasure.org", code="10*9/L"):
     leukocytes_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="6690-2",  # LOINC code for Leukocytes
-        coding_display="Leukocytes [#/volume] in Blood",
+        coding_code="275741008",
+        coding_display="Leukocytes in urine",  # TODO ¿Es este el concepto correcto?
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -195,13 +168,12 @@ def harmonize_leukocytes(resource_id, patient_reference, patient_display, value,
     return leukocytes_observation.to_json()
 
 
-# Function to harmonize Glucose Observation
 def harmonize_glucose(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     glucose_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="2339-0",  # LOINC code for Glucose
-        coding_display="Glucose [Moles/volume] in Blood",
+        coding_code="36048009",
+        coding_display="Glucose measurement",
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -212,13 +184,12 @@ def harmonize_glucose(resource_id, patient_reference, patient_display, value, un
     return glucose_observation.to_json()
 
 
-# Function to harmonize Insulin Observation
 def harmonize_insulin(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     insulin_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="27895-6",  # LOINC code for Insulin
-        coding_display="Insulin [Moles/volume] in Serum or Plasma",
+        coding_code="16890009",  # LOINC code for Insulin
+        coding_display="Insulin measurement",
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -229,47 +200,12 @@ def harmonize_insulin(resource_id, patient_reference, patient_display, value, un
     return insulin_observation.to_json()
 
 
-# Function to harmonize Ketones Observation
-def harmonize_ketones(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
-    ketones_observation = Observation(
-        id=resource_id,
-        coding_system="http://snomed.info/sct",
-        coding_code="29539-4",  # LOINC code for Ketones
-        coding_display="Ketones [Moles/volume] in Serum or Plasma",
-        subject_reference=patient_reference,
-        subject_display=patient_display,
-        value=value,
-        value_unit=unit,
-        value_system=system,
-        value_code=code
-    )
-    return ketones_observation.to_json()
-
-
-# Function to harmonize Cortisol Observation
-def harmonize_cortisol(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
-    cortisol_observation = Observation(
-        id=resource_id,
-        coding_system="http://snomed.info/sct",
-        coding_code="2143-6",  # LOINC code for Cortisol
-        coding_display="Cortisol [Moles/volume] in Serum or Plasma",
-        subject_reference=patient_reference,
-        subject_display=patient_display,
-        value=value,
-        value_unit=unit,
-        value_system=system,
-        value_code=code
-    )
-    return cortisol_observation.to_json()
-
-
-# Function to harmonize Glucagon Observation
 def harmonize_glucagon(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     glucagon_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="1659-1",  # LOINC code for Glucagon
-        coding_display="Glucagon [Moles/volume] in Serum or Plasma",
+        coding_code="70451005",  # LOINC code for Glucagon
+        coding_display="Glucagon measurement",
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -280,13 +216,12 @@ def harmonize_glucagon(resource_id, patient_reference, patient_display, value, u
     return glucagon_observation.to_json()
 
 
-# Function to harmonize Triglyceride Observation
 def harmonize_triglyceride(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     triglyceride_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="2571-8",  # LOINC code for Triglyceride
-        coding_display="Triglyceride [Moles/volume] in Serum or Plasma",
+        coding_code="14740000",
+        coding_display="Triglycerides measurement",
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -297,13 +232,12 @@ def harmonize_triglyceride(resource_id, patient_reference, patient_display, valu
     return triglyceride_observation.to_json()
 
 
-# Function to harmonize LDL Observation
 def harmonize_ldl(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     ldl_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="39469-2",  # LOINC code for LDL cholesterol
-        coding_display="LDL Cholesterol [Moles/volume] in Serum or Plasma",
+        coding_code="22644003",
+        coding_display="Low density lipoprotein measurement",
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -314,13 +248,12 @@ def harmonize_ldl(resource_id, patient_reference, patient_display, value, unit="
     return ldl_observation.to_json()
 
 
-# Function to harmonize VLDL Observation
 def harmonize_vldl(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     vldl_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="55838-7",  # LOINC code for VLDL cholesterol
-        coding_display="VLDL Cholesterol [Moles/volume] in Serum or Plasma",
+        coding_code="104585005",
+        coding_display="VLDL Cholesterol measurement",
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -331,13 +264,12 @@ def harmonize_vldl(resource_id, patient_reference, patient_display, value, unit=
     return vldl_observation.to_json()
 
 
-# Function to harmonize Non-HDL Cholesterol Observation
 def harmonize_non_hdl_cholesterol(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     non_hdl_cholesterol_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="96625-3",  # LOINC code for Non-HDL cholesterol
-        coding_display="Non-HDL Cholesterol [Moles/volume] in Serum or Plasma",
+        coding_code="NONE", #TODO No encuentro codigo correspondiente
+        coding_display="NONE",
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -348,13 +280,12 @@ def harmonize_non_hdl_cholesterol(resource_id, patient_reference, patient_displa
     return non_hdl_cholesterol_observation.to_json()
 
 
-# Function to harmonize HDL Observation
 def harmonize_hdl(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     hdl_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="2085-9",  # LOINC code for HDL cholesterol
-        coding_display="HDL Cholesterol [Moles/volume] in Serum or Plasma",
+        coding_code="17888004",
+        coding_display="High density lipoprotein measurement",
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -365,13 +296,12 @@ def harmonize_hdl(resource_id, patient_reference, patient_display, value, unit="
     return hdl_observation.to_json()
 
 
-# Function to harmonize Cholesterol Observation
 def harmonize_cholesterol(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     cholesterol_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="2093-3",  # LOINC code for Cholesterol
-        coding_display="Cholesterol [Moles/volume] in Serum or Plasma",
+        coding_code="77068002",
+        coding_display="Cholesterol measurement",
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -386,8 +316,8 @@ def harmonize_crp(resource_id, patient_reference, patient_display, value, unit="
     crp_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="1988-5",  # LOINC code for C-Reactive Protein (CRP)
-        coding_display="C-Reactive Protein [Mass/volume] in Serum or Plasma",
+        coding_code="55235003",
+        coding_display="C-Reactive Protein measurement",
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -398,12 +328,12 @@ def harmonize_crp(resource_id, patient_reference, patient_display, value, unit="
     return crp_observation.to_json()
 
 
-def harmonize_steps(resource_id, patient_reference, patient_display, value, unit="Number/day", system="http://unitsofmeasure.org", code="number/day"):
+def harmonize_steps(resource_id, patient_reference, patient_display, value, unit="Number/day", system="http://unitsofmeasure.org", code="{#}/d"):
     steps_observation = Observation(
         id=resource_id,
-        coding_system="http://snomed.info/sct",
-        coding_code="55423-8",  # LOINC code for Number of steps
-        coding_display="Number of steps in a day",
+        coding_system="http://loinc.org",
+        coding_code="41950-7",  # TODO No encontré equivalente de SNOMED CT
+        coding_display="Number of steps in 24 hour Measured",
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -414,30 +344,12 @@ def harmonize_steps(resource_id, patient_reference, patient_display, value, unit
     return steps_observation.to_json()
 
 
-# Function to harmonize Steps Observation
-def harmonize_steps(resource_id, patient_reference, patient_display, value, unit="Number/day", system="http://unitsofmeasure.org", code="number/day"):
-    steps_observation = Observation(
-        id=resource_id,
-        coding_system="http://snomed.info/sct",
-        coding_code="55423-8",  # LOINC code for Number of steps
-        coding_display="Number of steps in a day",
-        subject_reference=patient_reference,
-        subject_display=patient_display,
-        value=value,
-        value_unit=unit,
-        value_system=system,
-        value_code=code
-    )
-    return steps_observation.to_json()
-
-
-# Function to harmonize Total Sleep Time Observation
-def harmonize_total_sleep_time(resource_id, patient_reference, patient_display, value, unit="hours, minutes", system="http://unitsofmeasure.org", code="h,min"):
+def harmonize_total_sleep_time(resource_id, patient_reference, patient_display, value, unit="h", system="http://unitsofmeasure.org", code="h"):
     total_sleep_time_observation = Observation(
         id=resource_id,
-        coding_system="http://snomed.info/sct",
-        coding_code="3150-0",  # LOINC code for Sleep duration
-        coding_display="Total sleep time",
+        coding_system="http://loinc.org",
+        coding_code="93832-4",
+        coding_display="Sleep duration",
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -448,13 +360,12 @@ def harmonize_total_sleep_time(resource_id, patient_reference, patient_display, 
     return total_sleep_time_observation.to_json()
 
 
-# Function to harmonize Real Sleep Time Observation
-def harmonize_real_sleep_time(resource_id, patient_reference, patient_display, value, unit="hours, minutes", system="http://unitsofmeasure.org", code="h,min"):
+def harmonize_real_sleep_time(resource_id, patient_reference, patient_display, value, unit="h", system="http://unitsofmeasure.org", code="h"):
     real_sleep_time_observation = Observation(
         id=resource_id,
-        coding_system="http://snomed.info/sct",
-        coding_code="3151-8",  # Custom LOINC code for Real sleep time
-        coding_display="Real sleep time",
+        coding_system="http://loinc.org",
+        coding_code="93832-4",
+        coding_display="Sleep duration",  # TODO ¿Podemos usar el mismo código que el anterior?
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -465,13 +376,12 @@ def harmonize_real_sleep_time(resource_id, patient_reference, patient_display, v
     return real_sleep_time_observation.to_json()
 
 
-# Function to harmonize REM Sleep Time Observation
-def harmonize_rem_sleep_time(resource_id, patient_reference, patient_display, value, unit="hours, minutes", system="http://unitsofmeasure.org", code="h,min"):
+def harmonize_rem_sleep_time(resource_id, patient_reference, patient_display, value, unit="h", system="http://unitsofmeasure.org", code="h"):
     rem_sleep_time_observation = Observation(
         id=resource_id,
-        coding_system="http://snomed.info/sct",
-        coding_code="3152-6",  # Custom LOINC code for REM sleep time
-        coding_display="REM sleep time",
+        coding_system="http://loinc.org",
+        coding_code="93829-0",
+        coding_display="REM sleep duration",
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -482,13 +392,12 @@ def harmonize_rem_sleep_time(resource_id, patient_reference, patient_display, va
     return rem_sleep_time_observation.to_json()
 
 
-# Function to harmonize Superficial Sleep Time Observation
-def harmonize_superficial_sleep_time(resource_id, patient_reference, patient_display, value, unit="hours, minutes", system="http://unitsofmeasure.org", code="h,min"):
+def harmonize_superficial_sleep_time(resource_id, patient_reference, patient_display, value, unit="h", system="http://unitsofmeasure.org", code="h"):
     superficial_sleep_time_observation = Observation(
         id=resource_id,
-        coding_system="http://snomed.info/sct",
-        coding_code="3153-4",  # Custom LOINC code for Superficial sleep time
-        coding_display="Superficial sleep time",
+        coding_system="http://loinc.org",
+        coding_code="93830-8",
+        coding_display="Light sleep time",
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -499,12 +408,11 @@ def harmonize_superficial_sleep_time(resource_id, patient_reference, patient_dis
     return superficial_sleep_time_observation.to_json()
 
 
-# Function to harmonize Deep Sleep Time Observation
-def harmonize_deep_sleep_time(resource_id, patient_reference, patient_display, value, unit="hours, minutes", system="http://unitsofmeasure.org", code="h,min"):
+def harmonize_deep_sleep_time(resource_id, patient_reference, patient_display, value, unit="h", system="http://unitsofmeasure.org", code="h"):
     deep_sleep_time_observation = Observation(
         id=resource_id,
-        coding_system="http://snomed.info/sct",
-        coding_code="93831-6",  # LOINC code for Deep sleep duration
+        coding_system="http://loinc.org",
+        coding_code="93831-6",
         coding_display="Deep sleep duration",
         subject_reference=patient_reference,
         subject_display=patient_display,
@@ -516,13 +424,12 @@ def harmonize_deep_sleep_time(resource_id, patient_reference, patient_display, v
     return deep_sleep_time_observation.to_json()
 
 
-# Function to harmonize Sleep Efficiency Observation
 def harmonize_sleep_efficiency(resource_id, patient_reference, patient_display, value, unit="%", system="http://unitsofmeasure.org", code="%"):
     sleep_efficiency_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="248272009",  # ????
-        coding_display="Sleep efficiency",
+        coding_code="NONE",  # TODO No hay codigo para esto
+        coding_display="NONE",
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -533,13 +440,13 @@ def harmonize_sleep_efficiency(resource_id, patient_reference, patient_display, 
     return sleep_efficiency_observation.to_json()
 
 
-# Function to harmonize Stress Observation
-def harmonize_stress(resource_id, patient_reference, patient_display, value, unit="Low to high", system="http://unitsofmeasure.org", code="low-high"):
+# TODO Unidad de medida?
+def harmonize_stress(resource_id, patient_reference, patient_display, value, unit="???", system="http://unitsofmeasure.org", code="???"):
     stress_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="93085-8",  # LOINC code for Stress level
-        coding_display="Stress level",
+        coding_code="405052004",
+        coding_display="Level of stress",
         subject_reference=patient_reference,
         subject_display=patient_display,
         value=value,
@@ -550,12 +457,11 @@ def harmonize_stress(resource_id, patient_reference, patient_display, value, uni
     return stress_observation.to_json()
 
 
-# Function to harmonize Mean Heart Rate Observation
 def harmonize_mean_heart_rate(resource_id, patient_reference, patient_display, value, unit="beats/minute", system="http://unitsofmeasure.org", code="/min"):
     mean_heart_rate_observation = Observation(
         id=resource_id,
-        coding_system="http://snomed.info/sct",
-        coding_code="8893-0",  # LOINC code for Heart rate
+        coding_system="http://loinc.org",
+        coding_code="103205-1",
         coding_display="Mean heart rate",
         subject_reference=patient_reference,
         subject_display=patient_display,
@@ -567,12 +473,11 @@ def harmonize_mean_heart_rate(resource_id, patient_reference, patient_display, v
     return mean_heart_rate_observation.to_json()
 
 
-# Function to harmonize Maximum Heart Rate Observation
 def harmonize_maximum_heart_rate(resource_id, patient_reference, patient_display, value, unit="beats/minute", system="http://unitsofmeasure.org", code="/min"):
     maximum_heart_rate_observation = Observation(
         id=resource_id,
-        coding_system="http://snomed.info/sct",
-        coding_code="2081-4",  # LOINC code for Maximum heart rate
+        coding_system="http://loinc.org",
+        coding_code="101692-2",  # TODO Esta sí está en SNOMED pero con un nombre más específico
         coding_display="Maximum heart rate",
         subject_reference=patient_reference,
         subject_display=patient_display,
@@ -584,12 +489,11 @@ def harmonize_maximum_heart_rate(resource_id, patient_reference, patient_display
     return maximum_heart_rate_observation.to_json()
 
 
-# Function to harmonize Active Minutes Observation
-def harmonize_active_minutes(resource_id, patient_reference, patient_display, value, unit="minutes", system="http://unitsofmeasure.org", code="min"):
+def harmonize_active_minutes(resource_id, patient_reference, patient_display, value, unit="min", system="http://unitsofmeasure.org", code="min"):
     active_minutes_observation = Observation(
         id=resource_id,
         coding_system="http://snomed.info/sct",
-        coding_code="99999-1",  # ???
+        coding_code="99999-1",  # TODO Falta contexto
         coding_display="Active minutes",
         subject_reference=patient_reference,
         subject_display=patient_display,
@@ -601,12 +505,11 @@ def harmonize_active_minutes(resource_id, patient_reference, patient_display, va
     return active_minutes_observation.to_json()
 
 
-# Function to harmonize Burned Calories Observation
 def harmonize_burned_calories(resource_id, patient_reference, patient_display, value, unit="kcal", system="http://unitsofmeasure.org", code="kcal"):
     burned_calories_observation = Observation(
         id=resource_id,
-        coding_system="http://snomed.info/sct",
-        coding_code="41981-2",  # Custom LOINC code for Burned calories
+        coding_system="http://loinc.org",
+        coding_code="41981-2",
         coding_display="Calories burned",
         subject_reference=patient_reference,
         subject_display=patient_display,
@@ -616,6 +519,54 @@ def harmonize_burned_calories(resource_id, patient_reference, patient_display, v
         value_code=code
     )
     return burned_calories_observation.to_json()
+
+
+def harmonize_subcutaneous_glucose(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
+    subcutaneous_glucose_observation = Observation(
+        id=resource_id,
+        coding_system="http://snomed.info/sct",
+        coding_code="NONE",  # TODO No hay codigo relacionado con este concepto especifico
+        coding_display="NONE",
+        subject_reference=patient_reference,
+        subject_display=patient_display,
+        value=value,
+        value_unit=unit,
+        value_system=system,
+        value_code=code
+    )
+    return subcutaneous_glucose_observation.to_json()
+
+
+def harmonize_arterial_ketones(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
+    arterial_ketones_observation = Observation(
+        id=resource_id,
+        coding_system="http://snomed.info/sct",
+        coding_code="NONE",  # TODO No hay codigo relacionado con este concepto especifico
+        coding_display="NONE",
+        subject_reference=patient_reference,
+        subject_display=patient_display,
+        value=value,
+        value_unit=unit,
+        value_system=system,
+        value_code=code
+    )
+    return arterial_ketones_observation.to_json()
+
+
+def harmonize_salivary_cortisol(resource_id, patient_reference, patient_display, value, unit="nmol/L", system="http://unitsofmeasure.org", code="nmol/L"):
+    salivary_cortisol_observation = Observation(
+        id=resource_id,
+        coding_system="https://loinc.org/",
+        coding_code="51844-9",
+        coding_display="Cortisol [Moles/volume] in Saliva (oral fluid)",
+        subject_reference=patient_reference,
+        subject_display=patient_display,
+        value=value,
+        value_unit=unit,
+        value_system=system,
+        value_code=code
+    )
+    return salivary_cortisol_observation.to_json()
 
 
 def save_json_to_file(json_data, filename):

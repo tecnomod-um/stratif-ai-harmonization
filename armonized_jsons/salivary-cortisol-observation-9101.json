@@ -1,0 +1,24 @@
+{
+  "resourceType": "Observation",
+  "id": "salivary-cortisol-9101",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "2142-8",
+        "display": "Cortisol [Moles/volume] in Saliva"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/1234",
+    "display": "John Doe"
+  },
+  "valueQuantity": {
+    "value": 250,
+    "unit": "nmol/L",
+    "system": "http://unitsofmeasure.org",
+    "code": "nmol/L"
+  }
+}
