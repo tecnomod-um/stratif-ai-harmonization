@@ -1,0 +1,24 @@
+{
+    "resourceType": "Observation",
+    "id": "steps-observation-12345-20241108151106",
+    "status": "final",
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "41950-7",
+                "display": "Number of steps in 24 hour Measured"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "12345",
+        "display": "John Doe"
+    },
+    "valueQuantity": {
+        "value": 9200,
+        "unit": "Number/day",
+        "system": "http://unitsofmeasure.org",
+        "code": "{#}/d"
+    }
+}

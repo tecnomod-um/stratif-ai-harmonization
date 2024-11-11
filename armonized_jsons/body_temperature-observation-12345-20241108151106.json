@@ -1,0 +1,24 @@
+{
+    "resourceType": "Observation",
+    "id": "body_temperature-observation-12345-20241108151106",
+    "status": "final",
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "386725007",
+                "display": "Body temperature"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "12345",
+        "display": "John Doe"
+    },
+    "valueQuantity": {
+        "value": 36.9,
+        "unit": "C",
+        "system": "http://unitsofmeasure.org",
+        "code": "Cel"
+    }
+}

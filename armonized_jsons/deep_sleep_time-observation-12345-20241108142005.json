@@ -1,0 +1,24 @@
+{
+    "resourceType": "Observation",
+    "id": "deep_sleep_time-observation-12345-20241108142005",
+    "status": "final",
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "93831-6",
+                "display": "Deep sleep duration"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "12345",
+        "display": "John Doe"
+    },
+    "valueQuantity": {
+        "value": 80,
+        "unit": "h",
+        "system": "http://unitsofmeasure.org",
+        "code": "h"
+    }
+}

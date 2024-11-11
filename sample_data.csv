@@ -1,0 +1,4 @@
+Steps,Total sleep time,Real sleep time,REM sleep time,Superficial sleep time,Deep sleep time,Sleep efficiency,Stress,Mean heart rate,Maximum heart rate,Active minutes,Burned calories,Blood pressure,Length,Weight,Belly circumference,Heart rate,Body temperature,Hemoglobin,Leukocytes,Glucose,Insulin,Ketones,Cortisol,Glucagon,Triglyceride,LDL,VLDL,Non-HDL-cholesterol,HDL,Cholesterol,CRP,Subcutanious glucose,Arterial ketones,Salivary cortisol
+10000,450,410,80,300,60,85,Moderate,70,120,45,500,120,175,70,85,72,37.5,150,6.5,5.2,0.025,0.1,0.4,0.015,1.5,2.3,0.5,3.0,1.2,4.5,3.0,4.8,0.08,0.25
+8500,405,370,60,270,75,80,High,75,130,60,650,125,168,65,90,78,37.2,145,7.2,5.8,0.03,0.2,0.5,0.012,1.8,2.5,0.6,3.2,1.0,4.8,2.8,5.0,0.1,0.3
+9200,480,435,90,315,80,90,Low,68,110,50,550,118,180,80,88,70,36.9,160,5.8,4.9,0.02,0.05,0.3,0.018,1.3,2.0,0.4,2.8,1.3,4.0,3.2,4.6,0.06,0.2

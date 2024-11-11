@@ -1,0 +1,24 @@
+{
+    "resourceType": "Observation",
+    "id": "subcutaneous_glucose-observation-12345-20241108151106",
+    "status": "final",
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "NONE",
+                "display": "NONE"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "12345",
+        "display": "John Doe"
+    },
+    "valueQuantity": {
+        "value": 4.6,
+        "unit": "mmol/L",
+        "system": "http://unitsofmeasure.org",
+        "code": "mmol/L"
+    }
+}

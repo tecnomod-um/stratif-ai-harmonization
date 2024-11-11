@@ -1,0 +1,24 @@
+{
+    "resourceType": "Observation",
+    "id": "length-observation-12345-20241108142005",
+    "status": "final",
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "1153637007",
+                "display": "Body height"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "12345",
+        "display": "John Doe"
+    },
+    "valueQuantity": {
+        "value": 180,
+        "unit": "cm",
+        "system": "http://unitsofmeasure.org",
+        "code": "cm"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "resourceType": "Observation",
+    "id": "hemoglobin-observation-12345-20241108151106",
+    "status": "final",
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "271026005",
+                "display": "Hemoglobin level estimation"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "12345",
+        "display": "John Doe"
+    },
+    "valueQuantity": {
+        "value": 160,
+        "unit": "g/L",
+        "system": "http://unitsofmeasure.org",
+        "code": "g/L"
+    }
+}

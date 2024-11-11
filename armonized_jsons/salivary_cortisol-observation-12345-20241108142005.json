@@ -1,0 +1,24 @@
+{
+    "resourceType": "Observation",
+    "id": "salivary_cortisol-observation-12345-20241108142005",
+    "status": "final",
+    "code": {
+        "coding": [
+            {
+                "system": "https://loinc.org/",
+                "code": "51844-9",
+                "display": "Cortisol [Moles/volume] in Saliva (oral fluid)"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "12345",
+        "display": "John Doe"
+    },
+    "valueQuantity": {
+        "value": 0.2,
+        "unit": "nmol/L",
+        "system": "http://unitsofmeasure.org",
+        "code": "nmol/L"
+    }
+}

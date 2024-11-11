@@ -1,0 +1,24 @@
+{
+    "resourceType": "Observation",
+    "id": "burned_calories-observation-12345-20241108142005",
+    "status": "final",
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "41981-2",
+                "display": "Calories burned"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "12345",
+        "display": "John Doe"
+    },
+    "valueQuantity": {
+        "value": 550,
+        "unit": "kcal",
+        "system": "http://unitsofmeasure.org",
+        "code": "kcal"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "resourceType": "Observation",
+    "id": "leukocytes-observation-12345-20241108151106",
+    "status": "final",
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "275741008",
+                "display": "Leukocytes in urine"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "12345",
+        "display": "John Doe"
+    },
+    "valueQuantity": {
+        "value": 5.8,
+        "unit": "10^9/L",
+        "system": "http://unitsofmeasure.org",
+        "code": "10*9/L"
+    }
+}

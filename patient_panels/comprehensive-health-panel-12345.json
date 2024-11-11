@@ -1,0 +1,140 @@
+{
+    "resourceType": "Observation",
+    "id": "comprehensive-health-panel-12345",
+    "meta": {
+        "profile": "http://example.com/fhir/StructureDefinition/comprehensive-panel"
+    },
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://example.com/fhir/CodeSystem/comprehensive-observation-codes",
+                    "code": "comprehensive-panel",
+                    "display": "Comprehensive Health Panel"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "96500-0",
+                "display": "Comprehensive health observation panel"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "12345",
+        "display": "John Doe"
+    },
+    "effectiveDateTime": "2024-11-08T15:11:06.936150",
+    "hasMember": [
+        {
+            "reference": "Observation/steps-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/total_sleep_time-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/real_sleep_time-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/rem_sleep_time-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/superficial_sleep_time-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/deep_sleep_time-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/sleep_efficiency-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/stress-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/mean_heart_rate-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/maximum_heart_rate-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/active_minutes-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/burned_calories-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/blood_pressure-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/length-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/weight-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/belly_circumference-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/heart_rate-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/body_temperature-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/hemoglobin-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/leukocytes-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/glucose-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/insulin-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/ketones-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/cortisol-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/glucagon-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/triglyceride-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/ldl-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/vldl-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/non_hdl_cholesterol-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/hdl-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/cholesterol-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/crp-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/subcutaneous_glucose-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/arterial_ketones-observation-12345-20241108151106"
+        },
+        {
+            "reference": "Observation/salivary_cortisol-observation-12345-20241108151106"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "resourceType": "Observation",
+    "id": "stress-observation-12345-20241108142005",
+    "status": "final",
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "405052004",
+                "display": "Level of stress"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "12345",
+        "display": "John Doe"
+    },
+    "valueQuantity": {
+        "value": "Low",
+        "unit": "???",
+        "system": "http://unitsofmeasure.org",
+        "code": "???"
+    }
+}

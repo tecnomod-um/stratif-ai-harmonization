@@ -1,0 +1,24 @@
+{
+    "resourceType": "Observation",
+    "id": "maximum_heart_rate-observation-12345-20241108151106",
+    "status": "final",
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "101692-2",
+                "display": "Maximum heart rate"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "12345",
+        "display": "John Doe"
+    },
+    "valueQuantity": {
+        "value": 110,
+        "unit": "beats/minute",
+        "system": "http://unitsofmeasure.org",
+        "code": "/min"
+    }
+}

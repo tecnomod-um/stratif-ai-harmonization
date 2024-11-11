@@ -1,0 +1,24 @@
+{
+    "resourceType": "Observation",
+    "id": "total_sleep_time-observation-12345-20241108151106",
+    "status": "final",
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "93832-4",
+                "display": "Sleep duration"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "12345",
+        "display": "John Doe"
+    },
+    "valueQuantity": {
+        "value": 480,
+        "unit": "h",
+        "system": "http://unitsofmeasure.org",
+        "code": "h"
+    }
+}

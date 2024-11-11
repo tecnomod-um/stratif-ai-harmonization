@@ -1,0 +1,24 @@
+{
+    "resourceType": "Observation",
+    "id": "crp-observation-12345-20241108151106",
+    "status": "final",
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "55235003",
+                "display": "C-Reactive Protein measurement"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "12345",
+        "display": "John Doe"
+    },
+    "valueQuantity": {
+        "value": 3.2,
+        "unit": "mg/L",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/L"
+    }
+}

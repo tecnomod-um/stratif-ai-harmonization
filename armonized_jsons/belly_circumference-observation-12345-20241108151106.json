@@ -1,0 +1,24 @@
+{
+    "resourceType": "Observation",
+    "id": "belly_circumference-observation-12345-20241108151106",
+    "status": "final",
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "276361009",
+                "display": "Waist circumference"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "12345",
+        "display": "John Doe"
+    },
+    "valueQuantity": {
+        "value": 88,
+        "unit": "cm",
+        "system": "http://unitsofmeasure.org",
+        "code": "cm"
+    }
+}
