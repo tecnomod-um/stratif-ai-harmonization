@@ -1,0 +1,24 @@
+{
+    "resourceType": "Observation",
+    "id": "steps-observation-PruebaJson1-20241119123318",
+    "status": "final",
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "41950-7",
+                "display": "Number of steps in 24 hour Measured"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "PruebaJson1",
+        "display": "John2"
+    },
+    "valueQuantity": {
+        "value": 78,
+        "unit": "Number/day",
+        "system": "http://unitsofmeasure.org",
+        "code": "{#}/d"
+    }
+}

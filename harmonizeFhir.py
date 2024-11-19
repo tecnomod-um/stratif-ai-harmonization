@@ -2,6 +2,7 @@ from observation import Observation
 import json
 
 
+# Blood pressure
 def harmonize_blood_pressure(resource_id, patient_reference, patient_display, value, unit="mmHg",
                              system="http://unitsofmeasure.org", code="mm[Hg]"):
 
@@ -21,6 +22,7 @@ def harmonize_blood_pressure(resource_id, patient_reference, patient_display, va
     return blood_pressure_observation.to_json()
 
 
+# Length
 def harmonize_length(resource_id, patient_reference, patient_display, value, unit="cm", system="http://unitsofmeasure.org", code="cm"):
     length_observation = Observation(
         id=resource_id,
@@ -37,6 +39,7 @@ def harmonize_length(resource_id, patient_reference, patient_display, value, uni
     return length_observation.to_json()
 
 
+# Weight
 def harmonize_weight(resource_id, patient_reference, patient_display, value, unit="kg", system="http://unitsofmeasure.org", code="kg"):
     weight_observation = Observation(
         id=resource_id,
@@ -53,6 +56,7 @@ def harmonize_weight(resource_id, patient_reference, patient_display, value, uni
     return weight_observation.to_json()
 
 
+# Belly circumference
 def harmonize_belly_circumference(resource_id, patient_reference, patient_display, value, unit="cm", system="http://unitsofmeasure.org", code="cm"):
     belly_circumference_observation = Observation(
         id=resource_id,
@@ -69,6 +73,7 @@ def harmonize_belly_circumference(resource_id, patient_reference, patient_displa
     return belly_circumference_observation.to_json()
 
 
+# Heart rate
 def harmonize_heart_rate(resource_id, patient_reference, patient_display, value, unit="beats/minute", system="http://unitsofmeasure.org", code="/min"):
     heart_rate_observation = Observation(
         id=resource_id,
@@ -85,6 +90,7 @@ def harmonize_heart_rate(resource_id, patient_reference, patient_display, value,
     return heart_rate_observation.to_json()
 
 
+# Body temperature
 def harmonize_body_temperature(resource_id, patient_reference, patient_display, value, unit="C", system="http://unitsofmeasure.org", code="Cel"):
     body_temperature_observation = Observation(
         id=resource_id,
@@ -102,6 +108,7 @@ def harmonize_body_temperature(resource_id, patient_reference, patient_display, 
 
 
 # TODO Not enough context
+# Ketones
 def harmonize_ketones(resource_id, patient_reference, patient_display, value, unit="mmol/L",
                                system="http://unitsofmeasure.org", code="mmol/L"):
     arterial_ketones_observation = Observation(
@@ -119,6 +126,7 @@ def harmonize_ketones(resource_id, patient_reference, patient_display, value, un
     return arterial_ketones_observation.to_json()
 
 
+# Cortisol
 def harmonize_cortisol(resource_id, patient_reference, patient_display, value, unit="mmol/L",
                                 system="http://unitsofmeasure.org", code="mmol/L"):
     salivary_cortisol_observation = Observation(
@@ -136,6 +144,7 @@ def harmonize_cortisol(resource_id, patient_reference, patient_display, value, u
     return salivary_cortisol_observation.to_json()
 
 
+# Hemoglobin
 def harmonize_hemoglobin(resource_id, patient_reference, patient_display, value, unit="g/L", system="http://unitsofmeasure.org", code="g/L"):
     hemoglobin_observation = Observation(
         id=resource_id,
@@ -152,6 +161,7 @@ def harmonize_hemoglobin(resource_id, patient_reference, patient_display, value,
     return hemoglobin_observation.to_json()
 
 
+# Leukocytes
 def harmonize_leukocytes(resource_id, patient_reference, patient_display, value, unit="10^9/L", system="http://unitsofmeasure.org", code="10*9/L"):
     leukocytes_observation = Observation(
         id=resource_id,
@@ -168,6 +178,7 @@ def harmonize_leukocytes(resource_id, patient_reference, patient_display, value,
     return leukocytes_observation.to_json()
 
 
+# Glucose
 def harmonize_glucose(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     glucose_observation = Observation(
         id=resource_id,
@@ -184,6 +195,7 @@ def harmonize_glucose(resource_id, patient_reference, patient_display, value, un
     return glucose_observation.to_json()
 
 
+# Insulin
 def harmonize_insulin(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     insulin_observation = Observation(
         id=resource_id,
@@ -200,6 +212,7 @@ def harmonize_insulin(resource_id, patient_reference, patient_display, value, un
     return insulin_observation.to_json()
 
 
+# Glucagon
 def harmonize_glucagon(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     glucagon_observation = Observation(
         id=resource_id,
@@ -216,6 +229,7 @@ def harmonize_glucagon(resource_id, patient_reference, patient_display, value, u
     return glucagon_observation.to_json()
 
 
+# Triglyceride
 def harmonize_triglyceride(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     triglyceride_observation = Observation(
         id=resource_id,
@@ -232,6 +246,7 @@ def harmonize_triglyceride(resource_id, patient_reference, patient_display, valu
     return triglyceride_observation.to_json()
 
 
+# LDL
 def harmonize_ldl(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     ldl_observation = Observation(
         id=resource_id,
@@ -248,6 +263,7 @@ def harmonize_ldl(resource_id, patient_reference, patient_display, value, unit="
     return ldl_observation.to_json()
 
 
+# VLDL
 def harmonize_vldl(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     vldl_observation = Observation(
         id=resource_id,
@@ -264,6 +280,7 @@ def harmonize_vldl(resource_id, patient_reference, patient_display, value, unit=
     return vldl_observation.to_json()
 
 
+# Non-HDL-cholesterol
 def harmonize_non_hdl_cholesterol(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     non_hdl_cholesterol_observation = Observation(
         id=resource_id,
@@ -280,6 +297,7 @@ def harmonize_non_hdl_cholesterol(resource_id, patient_reference, patient_displa
     return non_hdl_cholesterol_observation.to_json()
 
 
+# HDL
 def harmonize_hdl(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     hdl_observation = Observation(
         id=resource_id,
@@ -296,6 +314,7 @@ def harmonize_hdl(resource_id, patient_reference, patient_display, value, unit="
     return hdl_observation.to_json()
 
 
+# Cholesterol
 def harmonize_cholesterol(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     cholesterol_observation = Observation(
         id=resource_id,
@@ -312,6 +331,7 @@ def harmonize_cholesterol(resource_id, patient_reference, patient_display, value
     return cholesterol_observation.to_json()
 
 
+# CRP
 def harmonize_crp(resource_id, patient_reference, patient_display, value, unit="mg/L", system="http://unitsofmeasure.org", code="mg/L"):
     crp_observation = Observation(
         id=resource_id,
@@ -328,6 +348,7 @@ def harmonize_crp(resource_id, patient_reference, patient_display, value, unit="
     return crp_observation.to_json()
 
 
+# Steps
 def harmonize_steps(resource_id, patient_reference, patient_display, value, unit="Number/day", system="http://unitsofmeasure.org", code="{#}/d"):
     steps_observation = Observation(
         id=resource_id,
@@ -344,6 +365,7 @@ def harmonize_steps(resource_id, patient_reference, patient_display, value, unit
     return steps_observation.to_json()
 
 
+# Total sleep time
 def harmonize_total_sleep_time(resource_id, patient_reference, patient_display, value, unit="h", system="http://unitsofmeasure.org", code="h"):
     total_sleep_time_observation = Observation(
         id=resource_id,
@@ -360,6 +382,7 @@ def harmonize_total_sleep_time(resource_id, patient_reference, patient_display, 
     return total_sleep_time_observation.to_json()
 
 
+# Real sleep time
 def harmonize_real_sleep_time(resource_id, patient_reference, patient_display, value, unit="h", system="http://unitsofmeasure.org", code="h"):
     real_sleep_time_observation = Observation(
         id=resource_id,
@@ -376,6 +399,7 @@ def harmonize_real_sleep_time(resource_id, patient_reference, patient_display, v
     return real_sleep_time_observation.to_json()
 
 
+# REM sleep time
 def harmonize_rem_sleep_time(resource_id, patient_reference, patient_display, value, unit="h", system="http://unitsofmeasure.org", code="h"):
     rem_sleep_time_observation = Observation(
         id=resource_id,
@@ -392,6 +416,7 @@ def harmonize_rem_sleep_time(resource_id, patient_reference, patient_display, va
     return rem_sleep_time_observation.to_json()
 
 
+# Superficial sleep time
 def harmonize_superficial_sleep_time(resource_id, patient_reference, patient_display, value, unit="h", system="http://unitsofmeasure.org", code="h"):
     superficial_sleep_time_observation = Observation(
         id=resource_id,
@@ -408,6 +433,7 @@ def harmonize_superficial_sleep_time(resource_id, patient_reference, patient_dis
     return superficial_sleep_time_observation.to_json()
 
 
+# Deep sleep time
 def harmonize_deep_sleep_time(resource_id, patient_reference, patient_display, value, unit="h", system="http://unitsofmeasure.org", code="h"):
     deep_sleep_time_observation = Observation(
         id=resource_id,
@@ -424,6 +450,7 @@ def harmonize_deep_sleep_time(resource_id, patient_reference, patient_display, v
     return deep_sleep_time_observation.to_json()
 
 
+# Sleep efficiency
 def harmonize_sleep_efficiency(resource_id, patient_reference, patient_display, value, unit="%", system="http://unitsofmeasure.org", code="%"):
     sleep_efficiency_observation = Observation(
         id=resource_id,
@@ -440,6 +467,8 @@ def harmonize_sleep_efficiency(resource_id, patient_reference, patient_display, 
     return sleep_efficiency_observation.to_json()
 
 
+# Stress
+# TODO Comprobar la unidad de medida
 def harmonize_stress(resource_id, patient_reference, patient_display, value, unit="???", system="http://unitsofmeasure.org", code="???"):
     stress_observation = Observation(
         id=resource_id,
@@ -456,6 +485,7 @@ def harmonize_stress(resource_id, patient_reference, patient_display, value, uni
     return stress_observation.to_json()
 
 
+# Mean heart rate
 def harmonize_mean_heart_rate(resource_id, patient_reference, patient_display, value, unit="beats/minute", system="http://unitsofmeasure.org", code="/min"):
     mean_heart_rate_observation = Observation(
         id=resource_id,
@@ -472,6 +502,7 @@ def harmonize_mean_heart_rate(resource_id, patient_reference, patient_display, v
     return mean_heart_rate_observation.to_json()
 
 
+# Maximum heart rate
 def harmonize_maximum_heart_rate(resource_id, patient_reference, patient_display, value, unit="beats/minute", system="http://unitsofmeasure.org", code="/min"):
     maximum_heart_rate_observation = Observation(
         id=resource_id,
@@ -488,6 +519,7 @@ def harmonize_maximum_heart_rate(resource_id, patient_reference, patient_display
     return maximum_heart_rate_observation.to_json()
 
 
+# Active minutes
 def harmonize_active_minutes(resource_id, patient_reference, patient_display, value, unit="min", system="http://unitsofmeasure.org", code="min"):
     active_minutes_observation = Observation(
         id=resource_id,
@@ -504,6 +536,7 @@ def harmonize_active_minutes(resource_id, patient_reference, patient_display, va
     return active_minutes_observation.to_json()
 
 
+# Burned calories
 def harmonize_burned_calories(resource_id, patient_reference, patient_display, value, unit="kcal", system="http://unitsofmeasure.org", code="kcal"):
     burned_calories_observation = Observation(
         id=resource_id,
@@ -520,6 +553,7 @@ def harmonize_burned_calories(resource_id, patient_reference, patient_display, v
     return burned_calories_observation.to_json()
 
 
+# Subcutaneous glucose
 def harmonize_subcutaneous_glucose(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     subcutaneous_glucose_observation = Observation(
         id=resource_id,
@@ -536,6 +570,7 @@ def harmonize_subcutaneous_glucose(resource_id, patient_reference, patient_displ
     return subcutaneous_glucose_observation.to_json()
 
 
+# Arterial ketones
 def harmonize_arterial_ketones(resource_id, patient_reference, patient_display, value, unit="mmol/L", system="http://unitsofmeasure.org", code="mmol/L"):
     arterial_ketones_observation = Observation(
         id=resource_id,
@@ -552,6 +587,7 @@ def harmonize_arterial_ketones(resource_id, patient_reference, patient_display, 
     return arterial_ketones_observation.to_json()
 
 
+# Salivary Cortisol
 def harmonize_salivary_cortisol(resource_id, patient_reference, patient_display, value, unit="nmol/L", system="http://unitsofmeasure.org", code="nmol/L"):
     salivary_cortisol_observation = Observation(
         id=resource_id,

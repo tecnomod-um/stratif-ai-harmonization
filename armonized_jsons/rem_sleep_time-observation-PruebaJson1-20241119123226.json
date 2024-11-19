@@ -1,0 +1,24 @@
+{
+    "resourceType": "Observation",
+    "id": "rem_sleep_time-observation-PruebaJson1-20241119123226",
+    "status": "final",
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "93829-0",
+                "display": "REM sleep duration"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "PruebaJson1",
+        "display": "John2"
+    },
+    "valueQuantity": {
+        "value": 90.0,
+        "unit": "h",
+        "system": "http://unitsofmeasure.org",
+        "code": "h"
+    }
+}

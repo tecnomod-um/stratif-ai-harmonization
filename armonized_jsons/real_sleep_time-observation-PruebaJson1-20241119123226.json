@@ -1,0 +1,24 @@
+{
+    "resourceType": "Observation",
+    "id": "real_sleep_time-observation-PruebaJson1-20241119123226",
+    "status": "final",
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "93832-4",
+                "display": "Sleep duration"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "PruebaJson1",
+        "display": "John2"
+    },
+    "valueQuantity": {
+        "value": 36.5,
+        "unit": "h",
+        "system": "http://unitsofmeasure.org",
+        "code": "h"
+    }
+}

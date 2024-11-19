@@ -91,6 +91,14 @@ def csv_to_dataframe(csv_path):
         return None
 
 
+def json_to_dataframe(json_input):
+
+    data = json.loads(json_input)
+    df = pd.DataFrame([data])
+
+    return df
+
+
 def process_batch(df, patient_reference, patient_display):
     """
     Processes each row of the DataFrame and sends the resulting observations to build_panel.

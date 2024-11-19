@@ -1,5 +1,6 @@
 import json
 
+
 class Observation:
     def __init__(self, id, coding_system, coding_code, coding_display,
                  subject_reference, subject_display, value, value_unit,
@@ -80,6 +81,7 @@ class Observation:
             }
         }
         return json.dumps(observation_dict, indent=2)
+
 
 # Example usage
 observation_example = Observation(

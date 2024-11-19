@@ -1,0 +1,47 @@
+{
+    "resourceType": "Observation",
+    "id": "comprehensive-health-panel-PruebaJson1",
+    "meta": {
+        "profile": "http://example.com/fhir/StructureDefinition/comprehensive-panel"
+    },
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://example.com/fhir/CodeSystem/comprehensive-observation-codes",
+                    "code": "comprehensive-panel",
+                    "display": "Comprehensive Health Panel"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "96500-0",
+                "display": "Comprehensive health observation panel"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "PruebaJson1",
+        "display": "John2"
+    },
+    "effectiveDateTime": "2024-11-19T12:33:18.600492",
+    "hasMember": [
+        {
+            "reference": "Observation/steps-observation-PruebaJson1-20241119123318"
+        },
+        {
+            "reference": "Observation/total_sleep_time-observation-PruebaJson1-20241119123318"
+        },
+        {
+            "reference": "Observation/real_sleep_time-observation-PruebaJson1-20241119123318"
+        },
+        {
+            "reference": "Observation/rem_sleep_time-observation-PruebaJson1-20241119123318"
+        }
+    ]
+}
